@@ -3,3 +3,259 @@
 @import 'reset';
 @import 'libs';
 @import 'global';
+
+.header{
+    margin-bottom: 135px;
+}
+
+.header-top{
+    padding-top: 21px;
+    min-height: 42px;
+    margin-bottom: 104px;
+    &,
+    &__box{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__contact-link{  
+        font-size: 18px;
+        color:#fff;
+        letter-spacing: 0.045em;
+        transition: all .5s;
+        &:hover{
+            color:$accent;
+            span{
+                color:#fff; 
+            }
+        }
+        span{
+            transition: inherit;
+            color:$accent;
+        }
+    }
+}
+
+.menu{
+    margin-right: 83px;
+    &__list{
+        display: flex;
+    }
+    &__list-item{
+        &+&{
+            margin-left: 35px;
+        }
+    }
+    &__list-link{
+        color:#fff;
+    }
+}
+
+.header-content{
+    display: flex;
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 173px;
+        background-color: #fff;
+        top: -173px;
+        right: 336px;
+    }
+    &__info{
+        padding-top: 26px;
+        min-width: 495px;
+    }
+    &__title{
+        @extend %title;
+        line-height: 100%;
+        margin-bottom: 32px;
+    }
+    &__text{
+        margin-bottom: 48px;
+        max-width: 357px;
+    }
+    &__box{
+        display: flex;
+
+    }
+    &__btn{
+        @extend %btn;
+    }
+    &__video{
+        padding: 15px 30px;
+        font-size: 18px;
+        color: #fff;
+        line-height: 1;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            left: 0;
+            top: 13px;
+            background-image: url('../images/icons/play.svg');
+            background-repeat: no-repeat;
+        }
+    }
+    &__img{
+        width: 726px;
+        height: 419px; 
+    }
+}
+
+.about{
+    margin-bottom: 185px;
+    &__inner{
+        display: flex;
+    }
+
+    &__info{
+        max-width: 590px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows:repeat(2,270px);;
+        margin-top: 75px;
+        
+    }
+
+    &__item{
+        &:nth-child(2),
+        &:nth-child(4){
+           padding-top: 120px;
+        }
+    }
+
+    &__item-num{
+        font-size: 25px;
+        width: 50px;
+        text-align: center;
+        padding-bottom: 10px;
+        margin-bottom: 25px;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background-color: $accent;
+            border-radius: 1px;
+            left: 0;
+            bottom: 0;
+        }
+    }
+
+    &__item-title{
+        margin-bottom: 10px;
+        line-height: 24px;
+        font-size: 20px;
+        @extend %rubik-500;
+    }
+
+    &__item-text{
+        max-width: 260px;
+    }
+
+    &__box{
+        max-width: 590px;
+    }
+
+    &__title{
+        @extend %title;
+        margin-bottom: 185px;
+        max-width: 333px;
+    }
+
+    &__img{
+        min-width: 590px;
+        object-fit: contain;
+    }
+}
+
+.develop{
+    margin: 0 auto 145px;
+    max-width: 995px;
+    display: flex;
+    &__img{
+        margin-right: 90px;
+        max-width: 415px;
+        object-fit: contain;
+    }
+
+    &__title{
+        @extend %title;
+        max-width: 490px;
+        margin-bottom: 45px;
+    }
+
+    &__text{
+        max-width: 285px;
+        margin-bottom: 50px;
+    }
+
+    &__btn{
+        @extend %btn;
+    }
+}
+
+.selection{
+    margin: 0 auto 145px;
+    max-width: 995px;
+    display: flex;
+    &__content{
+        max-width: 480px;
+        margin-right: 35px;
+    }
+    &__title{
+        @extend %title;
+        margin-bottom: 40px;
+    }
+    &__text{
+        max-width: 285px;
+        margin-bottom: 50px;
+    }
+    &__btn{
+        @extend %btn;
+    }
+}
+
+.work{
+    margin-bottom: 145px;
+    &__inner{
+        display: flex;
+    }
+    &__content{
+        margin-right: 90px;
+    }
+    &__title{
+        @extend %title;
+        margin-bottom: 80px;
+    }
+    &__item{
+        display: flex;
+        margin-bottom: 50px;
+        margin-left: 34px;
+        &:nth-child(5){
+            margin-bottom: 70px;
+        }
+    }
+    &__item-num{
+        color:$accent;
+        @extend %rubik-700;
+        font-size: 40px;
+        margin-right: 15px;
+        line-height: 1;
+    }
+    &__item-text{
+        padding-top: 5px;
+        max-width: 380px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+    &__btn{
+        @extend %btn;
+        margin-left: 100px;
+    }
+}

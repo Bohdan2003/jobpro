@@ -1,8 +1,46 @@
-%quicksand-400{
-    font-family:'Quicksand-Regular';
-    font-weight: 400px;
+$accent:#E8505B;
+
+%rubik-700{
+    font-family: "Rubik-Bold";
+    font-weight: 500;
 }
 
+%rubik-500{
+    font-family: "Rubik-Medium";
+    font-weight: 500;
+}
 
- 
-  
+%rubik-400{
+    font-family: "Rubik-Regular";
+    font-weight: 400;
+}
+
+%rubik-300{
+    font-family: "Rubik-Light";
+    font-weight: 300;
+}
+
+%title{
+    @extend %rubik-700;
+    font-size: 40px;
+    line-height: 110%;
+    span{
+        color:$accent;
+    }
+}
+
+%btn{
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #fff;
+    background-color: $accent;
+    border-radius: 5px;
+    line-height: 1;
+    margin-right: 35px;
+    display: inline-block;
+    transition: all .3s;
+    border: 2px solid $accent;
+    &:hover{
+        background-color: transparent;
+    } 
+}

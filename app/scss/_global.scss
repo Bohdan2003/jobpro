@@ -10,10 +10,18 @@ body{
 body{
     display: flex;
     flex-direction: column;
+    background-color: #12272F;
+    font-size: 16px;
+    @extend %rubik-400;
+    color: #fff;
+    p{
+        line-height: 130%;
+        opacity: 0.8;
+    }
 }
 
 .container{
-    max-width: 1200px;
+    max-width: 1230px;
     margin: 0 auto;
     padding: 0 15px;
 }
