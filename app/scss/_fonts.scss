@@ -37,3 +37,13 @@
         url('../fonts/Rubik-Light.woff') format('woff');
     font-display: swap;
 }
+
+@font-face {
+    font-family:'Roboto-Regular';
+    font-weight: 400;
+    font-style: normal;
+    src: local('Roboto-Regular'),
+        url('../fonts/Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/Roboto-Regular.woff') format('woff');
+    font-display: swap;
+}
